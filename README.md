@@ -17,6 +17,8 @@ We're compromisse in finding new and strategic solutions for any client and merc
 - [*Tutorials*](https://github.com/netcredbrasil/docs/blob/main/README.md#tutorials)
 - [*Error Codes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
 - [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
+- [*Tokenization*](https://github.com/netcredbrasil/docs/blob/main/README.md#tokenization)
+- [*Credit Chargtes*](https://github.com/netcredbrasil/docs/blob/main/README.md#credit-charges)
 
 
 # API
@@ -118,6 +120,33 @@ A ChargeCreate (or credit creation), inserts the PaymentProfile data through *Pa
 
 Single or one-time charges are identified using the chargeType attribute, which will have the value SINGLE.
 
+## Recurring Charges
 
 
->**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+As seen in this diagram:
+
+![Images](https://raw.githubusercontent.com/netcredbrasil/docs/main/images/CHARGE%20RECURRING.jpg)
+
+Recurring charges are, not surprisingly, charges that occur in a predefined recurring manner. If the method used is a credit card, it will need a Tokenized PaymentProfile since the data will be used in the future.
+
+A minimun of 2 requests are required to create recurring charges: CustomerCreate, ChargeCreate. If the Customer has been already created, it is not necessary, the same goes for the PaymentProfile, and if the recurring charge is using BILLET method, the PaymentProfile can be created inline.
+
+Recurring charges are identified using the chargeType attribute, which will have the value RECURRING.
+
+In particular for recurring card charges, the tokenization process is required and using **RRULE** for the definition of recurrence, from the **RFC 5545** (*iCalendar*), here are some examples for the definition of recurrence from **RRULE**:
+
+Every month on the first day of the month 30 times:
+
+>*- FREQ=MONTHLY;INTERVAL=1;BYMONTHDAY=1;COUNT=30*
+
+Starting 02/09/2021 (DD/MM/YYYY) every 10 days for a total o 5 times:
+
+>*- DTSTART:20210902T000000 RRULE:FREQ=DAILY;INTERVAL=10;COUNT=5*
+
+*Observation: If the RRULE makes the first charge today, it will be immediately charged, making it a normal request to subscription based services.*
+
+RRULES can get very specific, we recommend taking a look at examples or tools that help building them like [this](https://www.textmagic.com/free-tools/rrule-generator).
+
+
+
+#>**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
