@@ -11,6 +11,13 @@ Our mission are acting as a facilitator and payment service agent in operations 
 
 We're compromisse in finding new and strategic solutions for any client and merch segment. We know this solutions must be appropriate to Individual Payment Way of each one of the Comerce Relationship Trade. 
 
+# Summary
+
+- [*API*](https://github.com/netcredbrasil/docs/blob/main/README.md#api)
+- [*Tutorials*](https://github.com/netcredbrasil/docs/blob/main/README.md#tutorials)
+- [*Error COdes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
+- [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
+
 
 # API
 
@@ -21,7 +28,7 @@ This document serves as auxiliary documentation for NETCRED’s API, it should b
 The core concept needed for integration with this API is GraphQL. GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data, and gives clients the power to ask for exactly what they need and nothing more. You can learn more about it in the [*GraphQL Docs*](https://graphql.org/).
 
 
-## Tutorials
+# Tutorials
 
 
 A set of guides that will hopefully help you in the process of integration with this API.
