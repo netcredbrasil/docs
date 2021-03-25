@@ -52,6 +52,10 @@ When any mutation are made, you should retrieve the *errors* array, composed by 
 
 A list with all the custom errors can be found directly in our Postman documentation.
 
+- [*ChargeErrors*](https://documenter.getpostman.com/view/14324610/TW6urARy#f2c6361b-da1b-4e91-abd7-b9cc5fbab0af)
+- [*CompanyErrors*](https://documenter.getpostman.com/view/14324610/TW6urARy#df8d54fd-587e-4b3f-bca1-2a05cceed6cb)
+- [*WebhookErrors*](https://documenter.getpostman.com/view/14324610/TW6urARy#df8d54fd-587e-4b3f-bca1-2a05cceed6cb)
+
 
 *Observation: An Error can be sorted in different ways and when a error are not expected a syntax error are a point that needed to be addressed.*
 
@@ -60,7 +64,7 @@ A list with all the custom errors can be found directly in our Postman documenta
 
 
 very User needs to have an *UserType*, and even with the ambiguous name, an *UserType* is types of Company that an User needs to be associated with. 
-To understand the companies types and how they correlate with them, you must have to know how they work, you will be able to find a complete description of each part of the companies in our Postman documentation.
+To understand the companies types and how they correlate with them, you must have to know how they work, you will be able to find a complete description of each part of the companies in our [*Postman documentation*](https://documenter.getpostman.com/view/14324610/TW6urARy#dc73138e-3613-43d4-9436-5d570de279c4).
 
 
 A **COMPANY** can be a **MERCHANT**, **MARKETPLACE**, **FACILITATOR**, **FINANCIER** or a **COMISSIONED**. And knowing all this types you need to know how each one of them are correlated each other, as viewed in this diagram:
@@ -83,4 +87,4 @@ Knowing all the types of Companies and how they work together, an useful informa
 
 
 
-**You can find full documentation [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
