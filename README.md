@@ -18,11 +18,36 @@ This document serves as auxiliary documentation for NETCRED’s API, it should b
 ## Overview
 The core concept needed for integration with this API is GraphQL. GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data, and gives clients the power to ask for exactly what they need and nothing more. You can learn more about it in the [*GraphQL Docs*](https://graphql.org/).
 
+## Tutorials
+
+A set of guides that will hopefully help you in the process of integration with this API.
+
+Authentication takes place via **JWT** token, more details on this format at [*JWT Docs*](https://jwt.io/).
+
+To authenticate you need to execute a tokenAuth request with your username and password. By a successful request, you receive a token to authenticate in other requests, it does lasts 24 hours from the moment of it's creation. 
+
+Subsequent requests need the header  **"Authorization": "JWT {*your token*}"**.
+
+The token can be refreshed for another 24 hours using the refreshToken* request (before it expires, of course), and you can check the time until its expiration using verifyToken.
+
+For a better knowledge you can observe this diagram:
+
+![Image](https://raw.githubusercontent.com/netcredbrasil/docs/main/images/AUTHENTICATION.jpg)
+
+*Observation: If expired, the token needs to be generated again.*
+
+## Error Codes
+
+When a *Error* happens, it will appear a **Error Code**. *Error codes* will help in the process of understanding the problem and how you can fix it. As an Example:
+
+>PAYMENT_METHOD_INVALID = "Payment method is unknown"
+
+When any mutation are made, you should retrieve the *errors* array, composed by "field" and "message", when running that mutation and a *error* proceed, will be displayed an **Error Code** in the results, compose by the name of the code and a quick description. 
+
+A list with all the custom errors can be found directly in our postman documentation.
 
 
-
-
-
+*Observation: An Error can be sorted in different ways and when a error are not expected a syntax error are a point that needed to be addressed.*
 
 
 
