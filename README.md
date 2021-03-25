@@ -217,4 +217,4 @@ A Lease determines how much will be paid, if the minimum amount is not reached.
 A Terminal is a representation of a physical terminal, having its serial number or chip identification number on its instance.
 
 
-# **You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+# **You can find full documentation with more details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
