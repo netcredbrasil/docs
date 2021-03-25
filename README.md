@@ -18,7 +18,8 @@ We're compromisse in finding new and strategic solutions for any client and merc
 - [*Error Codes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
 - [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
 - [*Tokenization*](https://github.com/netcredbrasil/docs/blob/main/README.md#tokenization)
-- [*Credit Chargtes*](https://github.com/netcredbrasil/docs/blob/main/README.md#credit-charges)
+- [*Credit Charges*](https://github.com/netcredbrasil/docs/blob/main/README.md#credit-charges)
+- [*Recurring Charges*](https://github.com/netcredbrasil/docs/blob/main/README.md#recurring-charges)
 
 
 # API
@@ -149,4 +150,4 @@ RRULES can get very specific, we recommend taking a look at examples or tools th
 
 
 
->**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+#**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
