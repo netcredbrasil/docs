@@ -1,3 +1,4 @@
+**WARNING: This documentation is early access and is under active development.**
 ## ![NETCRED LOGO](https://netcredbrasil.com.br/wp-content/uploads/2017/01/NETCRED-Meios-de-pagamento.png)
 
 [*Netcred*](https://netcredbrasil.com.br/) is a Brazillian company focused on the Payment service segment for the Industry and Retail sector.
@@ -11,7 +12,6 @@ Our mission are acting as a facilitator and payment service agent in operations 
 We're compromisse in finding new and strategic solutions for any client and merch segment. We know this solutions must be appropriate to Individual Payment Way of each one of the Comerce Relationship Trade. 
 
 # API
-**WARNING: This documentation is early access and is under active development.**
 
 This document serves as auxiliary documentation for NETCRED’s API, it should be used in conjunction to the Playground, in order to get the most out of the experience. This document will get you acquainted to creating charges, managing companies, marketplaces and financial contracts through NETCRED's ecosystem.
 
