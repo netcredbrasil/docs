@@ -15,6 +15,7 @@ We're compromisse in finding new and strategic solutions for any client and merc
 
 - [*API*](https://github.com/netcredbrasil/docs/blob/main/README.md#api)
 - [*Tutorials*](https://github.com/netcredbrasil/docs/blob/main/README.md#tutorials)
+- [*Authentication*](https://github.com/netcredbrasil/docs/blob/main/README.md#authentication)
 - [*Error Codes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
 - [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
 - [*Tokenization*](https://github.com/netcredbrasil/docs/blob/main/README.md#tokenization)
