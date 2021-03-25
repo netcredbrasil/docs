@@ -19,7 +19,11 @@ We're compromisse in finding new and strategic solutions for any client and merc
 - [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
 - [*Tokenization*](https://github.com/netcredbrasil/docs/blob/main/README.md#tokenization)
 - [*Credit Charges*](https://github.com/netcredbrasil/docs/blob/main/README.md#credit-charges)
+- [*Billet Charges*](https://github.com/netcredbrasil/docs/blob/main/README.md#billet-charges)
 - [*Recurring Charges*](https://github.com/netcredbrasil/docs/blob/main/README.md#recurring-charges)
+- [*Disputes*](https://github.com/netcredbrasil/docs/blob/main/README.md#disputes)
+- [*Webhooks*](https://github.com/netcredbrasil/docs/blob/main/README.md#webhooks)
+- [*Terminals*](https://github.com/netcredbrasil/docs/blob/main/README.md#terminals)
 
 
 # API
@@ -148,6 +152,69 @@ Starting 02/09/2021 (DD/MM/YYYY) every 10 days for a total o 5 times:
 
 RRULES can get very specific, we recommend taking a look at examples or tools that help building them like [this](https://www.textmagic.com/free-tools/rrule-generator).
 
+## Billet Charges
+
+As seen in this diagram:
+
+![Diagram](https://raw.githubusercontent.com/netcredbrasil/docs/main/images/CHARGE%20BILLET.jpg)
+
+Billet charges are, charges that occur using a Billet as a payment method. 
+
+A minimun of 3 requests are required to create billet charges: CustomerCreate, ChargeCreate and PaymentProfile. If the Customer has been already created, it's not necessary, because you're using BILLET method as the recurring charge, the PaymentProfile can be created inline.
+
+Billet charges are identified using the paymentMethod attribute, which will have the value BILLET.
+
+## Disputes
+
+A dispute occurs when a cardholder contacts their card issuing bank and demands to have their money returned. Disputes are a feature of card networks and intends to protect cardholders from fraudulent activity.
+
+Disputes are represented by DisputeType, and users of type **FACILITATOR** can create these using DisputeCreate. Disputes can be created up to 6 months after the transaction takes place.
+
+Disputes have three possible statuses, *ONGOING, CUSTOMER_WON* and *MERCHANT_WON*. Disputes start in **ONGOING**, at this moment **MERCHANT** is notified, and dispute information is requested from the **MERCHANT**. After evaluating the information provided, the authorizer makes a decision that can result in a win for the consumer (*CUSTOMER_WON*), where a Chargeback will be made, or a win for the seller (*MERCHANT_WON*), in which case the funds continue their Payout flow normally.
+
+In the case of a Chargeback, a Deduction object will be created automatically, in the amount equivalent to the dispute.
+
+## Webhooks
+
+Webhooks work as a notification when a action happens, alerting the user in real time, as a example, when a transaction is refunded.
+
+*The triggers that can be found and will ring a notification for the server are:*
+ 
+- **ANY** = "Any event"
+
+- **CHARGE_CREATE** = "Charge created"
+
+- **CHARGE_UPDATE** = "Charge updated"
+
+- **CHARGE_VOID** = "Charge voided"
+
+- **TRANSACTION_CAPTURE** = "Transaction captured"
+
+- **TRANSACTION_UPDATE** = "Transaction updated"
+
+- **TRANSACTION_VOID** = "Transaction voided"
+
+- **TRANSACTION_REFUND** = "Transaction refunded"
+
+- **TRANSACTION_DISPUTE** = "Transaction disputed"
+
+- **TRANSACTION_AUTHORIZE** = "Transaction disputed"
+
+- **PAYMENT_PROFILE_TOKENIZE** = Payment Profile tokenized"
+
+- **PAYMENT_PROFILE_UPDATE** = "Payment Profile updated"
+
+- **PAYMENT_PROFILE_DELETE** = "Payment Profile deleted"
+
+- **PAYMENT_PROFILE_EXPIRING** = "Payment Profile close to expiry"
+
+## Terminal
+
+Terminals are created and binded in a Lease to a company. 
+
+A Lease determines how much will be paid, if the minimum amount is not reached.
+
+A Terminal is a representation of a physical terminal, having its serial number or chip identification number on its instance.
 
 
 # **You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
