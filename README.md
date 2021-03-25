@@ -13,10 +13,10 @@ We're compromisse in finding new and strategic solutions for any client and merc
 
 # API
 
-This document serves as auxiliary documentation for NETCRED’s API, it should be used in conjunction to the Playground, in order to get the most out of the experience. This document will get you acquainted to creating charges, managing companies, marketplaces and financial contracts through NETCRED's ecosystem.
+This document serves as auxiliary documentation for NETCRED’s API, it should be used in conjunction to the [*Playground*](https://sandbox.netcredbrasil.com.br/), in order to get the most out of the experience. This document will get you acquainted to creating charges, managing companies, marketplaces and financial contracts through NETCRED's ecosystem.
 
 ## Overview
-The core concept needed for integration with this API is GraphQL. GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data, and gives clients the power to ask for exactly what they need and nothing more. You can learn more about it in the GraphQL Docs.
+The core concept needed for integration with this API is GraphQL. GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data, and gives clients the power to ask for exactly what they need and nothing more. You can learn more about it in the [*GraphQL Docs*](https://graphql.org/).
 
 
 
