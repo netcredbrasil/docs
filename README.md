@@ -15,7 +15,7 @@ We're compromisse in finding new and strategic solutions for any client and merc
 
 - [*API*](https://github.com/netcredbrasil/docs/blob/main/README.md#api)
 - [*Tutorials*](https://github.com/netcredbrasil/docs/blob/main/README.md#tutorials)
-- [*Error COdes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
+- [*Error Codes*](https://github.com/netcredbrasil/docs/blob/main/README.md#error-codes)
 - [*UserTypes and Companies*](https://github.com/netcredbrasil/docs/blob/main/README.md#usertype-and-companies)
 
 
@@ -92,6 +92,21 @@ Knowing all the types of Companies and how they work together, an useful informa
 - *SUSPENDED* - The company is suspended;
 - *AWAITING_APPROVAL* - The company is awaiting approval;
 
+## 
+
+Tokenization is the process of validating and storing a card for future use, and is required for recurring charges. A tokenization occurs automatically when the PaymentProfileCreate request is called for the method that is **CARD**.
+
+Your return will be a PaymentProfile and you will be able to verify success according to some attributes.
+
+In case of success, the value of the token attribute will be filled and the *isActive* attribute will be equal to true.
+
+In case of rejection, the value of the token attribute will be empty and the *isActive* attribute will be equal to false. You can also check the *rejectedReason* for the reason for the refusal.
+
+The *PaymentProfileType* also has access to *OperationType* objects, which contain more details about the tokenization operation.
+
+It is worth noting that when trying to call this request for an equal *cardNumber* that already has a token, will result in only updating the different data of this card.
+
+PaymentProfileVoid, removes the token from a **CARD** method *PaymentProfile* and makes that profile inactive, by setting *isActive* attribute to *false*, that same profile can be tokenized again using PaymentProfileCreate.
 
 
-**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+>**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
