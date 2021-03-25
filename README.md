@@ -92,7 +92,7 @@ Knowing all the types of Companies and how they work together, an useful informa
 - *SUSPENDED* - The company is suspended;
 - *AWAITING_APPROVAL* - The company is awaiting approval;
 
-## 
+## Tokenization
 
 Tokenization is the process of validating and storing a card for future use, and is required for recurring charges. A tokenization occurs automatically when the PaymentProfileCreate request is called for the method that is **CARD**.
 
@@ -107,6 +107,17 @@ The *PaymentProfileType* also has access to *OperationType* objects, which conta
 It is worth noting that when trying to call this request for an equal *cardNumber* that already has a token, will result in only updating the different data of this card.
 
 PaymentProfileVoid, removes the token from a **CARD** method *PaymentProfile* and makes that profile inactive, by setting *isActive* attribute to *false*, that same profile can be tokenized again using PaymentProfileCreate.
+
+## Credit Charges
+
+Credit Charges are one-time charges and don't need use a tokenized PaymentProfile to be created.
+
+To create a credit charge, a maximum of 2 requests are required: CustomerCreate and ChargeCreate, and CustomerCreate is only necessary if the Customer has not been created previously. 
+
+A ChargeCreate (or credit creation), inserts the PaymentProfile data through *PaymentProfileInput* object inline, and not on a new request, therefore it will not execute the Tokenization process.
+
+Single or one-time charges are identified using the chargeType attribute, which will have the value SINGLE.
+
 
 
 >**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
