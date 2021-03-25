@@ -1,7 +1,7 @@
 **WARNING: This documentation is early access and is under active development.**
 ## [![NETCRED LOGO](https://netcredbrasil.com.br/wp-content/uploads/2017/01/NETCRED-Meios-de-pagamento.png)](https://netcredbrasil.com.br/)
 
-[*Netcred*](https://netcredbrasil.com.br/){:target="_blank" rel="noopener"} is a Brazillian company focused on the Payment service segment for the Industry and Retail sector.
+[*Netcred*](https://netcredbrasil.com.br/) is a Brazillian company focused on the Payment service segment for the Industry and Retail sector.
 Our mission are acting as a facilitator and payment service agent in operations using credit card, debt, billet and others. 
 
 
