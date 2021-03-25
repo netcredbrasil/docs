@@ -40,6 +40,8 @@ The core concept needed for integration with this API is GraphQL. GraphQL is a q
 
 A set of guides that will hopefully help you in the process of integration with this API.
 
+## Authentication
+
 Authentication takes place via **JWT** token, more details on this format at [*JWT Docs*](https://jwt.io/).
 
 To authenticate you need to execute a tokenAuth request with your username and password. By a successful request, you receive a token to authenticate in other requests, it does lasts 24 hours from the moment of it's creation. 
