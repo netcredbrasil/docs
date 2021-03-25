@@ -149,4 +149,4 @@ RRULES can get very specific, we recommend taking a look at examples or tools th
 
 
 
-#>**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
+>**You can find full documentation with better details [*Here!*](https://documenter.getpostman.com/view/14324610/TW6urARy#intro)**
